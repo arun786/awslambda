@@ -16,8 +16,15 @@ public class CheckFor implements RequestHandler<RequestClass, ResponseClass> {
 
     @Override
     public ResponseClass handleRequest(RequestClass requestClass, Context context) {
-        Map<String,String> map = new HashMap<>();
-        map.put(requestClass.getFirstName(), requestClass.getLastName());
+        Map<String, String> map = new HashMap<>();
+        String env = System.getenv("env");
+        map.put("First Name ", requestClass.getFirstName());
+        map.put("Last Name", requestClass.getLastName());
+        map.put("Environment", env);
         return new ResponseClass(map);
+    }
+
+    public CheckFor() {
+        System.out.println("This is called only once");
     }
 }
