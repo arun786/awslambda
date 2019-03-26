@@ -25,6 +25,7 @@ public class Calculate implements RequestHandler<ModelRequestAge, ModelResponseA
         }
 
         modelResponseAge.setDescription(description);
+        context.getLogger().log(modelResponseAge.toString());
         return modelResponseAge;
     }
 }
