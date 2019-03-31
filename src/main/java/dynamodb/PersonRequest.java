@@ -1,11 +1,11 @@
-package model;
+package dynamodb;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class DynamoDBFields {
+public class PersonRequest {
     private String user_id;
     private String first_name;
     private Integer age;
